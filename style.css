@@ -1,3 +1,16 @@
+:root {
+    --color-primary: #1F2937;
+    --color-bg-secondary: #e5e7eb;
+    --color-highlight: #3882F6;
+    --site-width: 720px;
+    --padding-standard: 50px;
+    --padding-small: 15px;
+    --padding-xs: 8px;
+    --corner-curve: 20px;
+    --shadow-standard: 0px 6px 20px 0px rgba(0,0,0,0.13);
+    --gap-standard: 20px;
+}
+
 * {
     font-family: 'Poppins', 'Veranda', sans-serif;
     box-sizing: border-box;
@@ -9,19 +22,14 @@ body {
         margin: 0px;
     }
     min-height: 100vh;
+
+    a:hover {
+        color: var(--color-highlight);
+    }
 }
 
-:root {
-    --color-primary: #1F2937;
-    --color-bg-secondary: #e5e7eb;
-    --color-highlight: #3882F6;
-    --site-width: 720px;
-    --padding-standard: 50px;
-    --padding-small: 15px;
-    --padding-xs: 8px;
-    --corner-curve: 25px;
-    --shadow-standard: 0px 6px 20px 0px rgba(0,0,0,0.13);
-    --gap-standard: 20px;
+h5 {
+    font-size: 16px;
 }
 
 .bg-primary {
@@ -37,6 +45,20 @@ body {
 }
 
 .text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+blockquote {
+    font-size: 21px;
+    font-style: italic;
+}
+
+#footer {
+    padding: var(--padding-small) 20px;
     text-align: center;
 }
 
@@ -56,6 +78,22 @@ button {
     padding: var(--padding-xs) 20px;
     border-radius: var(--corner-curve);
     border: 2px solid var(--color-primary);
+
+    &:hover {
+        background-color: var(--color-highlight);
+        color: #fff;
+    }
+}
+
+.btn-white {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+
+    &:hover {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
 }
 
 #header-menu {
@@ -79,6 +117,10 @@ button {
             text-decoration: none;
             color: #ffffff;
         }
+
+        a:hover {
+            color: var(--color-highlight);
+        }
     }
 }
 
@@ -87,11 +129,12 @@ button {
     max-width: var(--site-width);
     margin: auto;
     padding: 8em 0em var(--padding-standard);
+    align-items: center;
 
     .button-container {
         gap: var(--gap-standard);
         margin: var(--padding-small) 0px;
-    }s
+    }
 }
 
 #features-container {
@@ -132,4 +175,28 @@ button {
     font-size: 24px;
     font-weight: 600px;
     margin-bottom: var(--gap-standard);
+}
+
+#quote {
+    padding: var(--padding-standard) 20px;
+
+    > div {
+        max-width: var(--site-width);
+        margin: auto;
+    }
+}
+
+#cta {
+    padding: var(--padding-standard) 20px;
+
+    > div {
+        background-color: var(--color-highlight);
+        color: #fff;
+        max-width: var(--site-width);
+        margin: auto;
+        border-radius: var(--corner-curve);
+        padding: var(--padding-standard) 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
